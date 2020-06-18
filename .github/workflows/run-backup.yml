@@ -1,14 +1,9 @@
 # This workflow will install Python dependencies, run the helper with a single version of Python
 
-name: Youtube-dl JOB
-
+name: backup-pl
 on:
-
-  schedule:
-    #once every 10 minutes
-    - cron: "*/5 * * * *"
-  push:
-    branches: [master]
+  repository_dispatch:
+    types: update-pl
 
 jobs:
 
