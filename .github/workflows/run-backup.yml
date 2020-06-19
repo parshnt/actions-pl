@@ -32,5 +32,4 @@ jobs:
         TITLE: ${{ github.event.client_payload.title }}
       run: |
         python bot.py
-        echo "Backup Updated"
-        ls
+        echo $FILE
