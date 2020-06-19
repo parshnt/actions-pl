@@ -32,7 +32,7 @@ jobs:
         TITLE: ${{ github.event.client_payload.title }}
       run: |
         python bot.py
-        echo ${{FILE}}
+        echo "${{FILE}}"
         
     - name: send music backup
       uses: appleboy/telegram-action@master
