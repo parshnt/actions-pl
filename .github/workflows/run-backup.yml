@@ -32,13 +32,15 @@ jobs:
         TITLE: ${{ github.event.client_payload.title }}
       run: |
         python bot.py
+        echo ${{FILE}}
         
     - name: send music backup
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: $FILE
-        audio: $FILE
-        voice: $FILE
+        message: ${{FILE}}
+        audio: ${{FILE}}
+        voice: ${{FILE}}
+        document : ${{FILE}}
         
