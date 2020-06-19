@@ -40,6 +40,6 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "doc, audio, voice"
-        document: Mountain at My Gates.mp3
+        document: *.mp3
         audio: Mountain at My Gates.mp3
         voice: Mountain at My Gates.mp3
