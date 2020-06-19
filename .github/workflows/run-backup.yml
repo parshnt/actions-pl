@@ -39,8 +39,5 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{FILE}}
-        audio: ${{FILE}}
-        voice: ${{FILE}}
-        document : ${{FILE}}
+        message: "$FILE"
         
