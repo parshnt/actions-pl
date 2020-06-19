@@ -28,7 +28,7 @@ jobs:
 
     - name: Update the Stats
       env:
-        GITHUB_TOKEN: ${{ secrets.github_token }}
+        TITLE: ${{ github.event.client_payload.title }}
       run: |
         python bot.py
         echo "Backup Updated"
