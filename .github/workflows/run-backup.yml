@@ -32,7 +32,7 @@ jobs:
         TITLE: ${{ github.event.client_payload.title }}
       run: |
         python bot.py
-        for file in *.mp3; do song=$file; done
+        for file in *.mp3; do echo "::set-env name=SONG::$file"; done
         
     - name: send music backup
       uses: appleboy/telegram-action@master
@@ -40,4 +40,4 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: Hello
-        document: ${{ song }}
+        document: $SONG
