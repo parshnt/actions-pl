@@ -32,4 +32,6 @@ jobs:
         TITLE: ${{ github.event.client_payload.title }}
       run: |
         python bot.py
-        find . -name '*.mp3' -exec echo {} \;
+        abc = find . -name '*.mp3'
+        echo Done
+        echo $abc
