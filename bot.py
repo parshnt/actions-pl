@@ -2,9 +2,7 @@ import os, youtube_dl
 
 video_url = os.environ['TITLE']
 video_info = youtube_dl.YoutubeDL().extract_info(url=video_url, download=False)
-
 filename = f"{video_info['title']}.mp3"
-os.environ["FILE"] = filename
 
 options = {
     'format': 'bestaudio/best',
