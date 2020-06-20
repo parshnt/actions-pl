@@ -33,4 +33,10 @@ jobs:
       run: |
         python bot.py
         for file in *.mp3; do song=$file; done
-        echo $song
+        
+    - name: send music backup
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        document: $song
