@@ -34,4 +34,5 @@ jobs:
         python bot.py
         for file in *mp3; do
         $FILE = file
+        done
         echo $FILE
